@@ -1,14 +1,17 @@
 body{
     margin: 0px;
+    -webkit-transform: perspective(500px);
+    -webkit-transform-style: preserve-3d;
 }
 
 .box {
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: center;
     
     background-color: white;
-    width: 300px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 10%;
     border: solid 5px;
     border-color: black;
@@ -26,6 +29,7 @@ body{
 .container {
     display: flex;
     justify-content: center;
+    align-self: center;
     align-items: center;
 }
 
@@ -33,25 +37,99 @@ body{
 color: black;
 }
 
+button {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+  }
+  .coin {
+      background-image: url("https://i.imgur.com/Iw5eEoh.png");
+      background-size: 100% 100%;
+      border-radius: 100%;
+      height: 100px;
+      margin: 300px auto 0;
+      position: relative;
+      width: 100px;
+      -webkit-transition: .5s linear;
+      -webkit-transform-style: preserve-3d;
+  }
+  .bwd {
+    transform: rotateX(180deg);
+  }
+  .coin:after {
+      background-image: url("https://i.imgur.com/loMp8t7.png?1");
+      background-size: 100% 100%;
+      bottom: 0;
+      content: '';
+      left: 45px;
+      position: absolute;
+      top: 0;
+      width: 5px;
+      z-index: -10;
+      -webkit-transform: rotateY(-90deg);
+      -webkit-transform-origin: 100% 50%;
+  }
+  .coin:before {
+      background-image: url("https://i.imgur.com/loMp8t7.png?1");
+      background-size: 100% 100%;
+      border-radius: 100%;
+      content: '';
+      height: 100px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100px;
+      -webkit-transform: translateZ(-5px);
+  }
+  
+  .headToHead { animation: headToHead 5s linear; transform: rotateX(40deg); }
+  @keyframes headToHead {
+    0% { transform: translateY(0px) rotateX(40deg); }
+    33% { transform: translateY(-125px) rotateX(1820deg); }
+    66% { transform: translateY(-250px) rotateX(2730deg); }
+    100% { transform: translateY(0px) rotateX(3640deg); }
+  }
+  
+  .headToTail { animation: headToTail 5s linear; transform: rotateX(220deg); }
+  @keyframes headToTail {
+    0% { transform: translateY(0px) rotateX(40deg); }
+    33% { transform: translateY(-125px) rotateX(1820deg); }
+    66% { transform: translateY(-250px) rotateX(2730deg); }
+    100% { transform: translateY(0px) rotateX(3820deg); }
+  }
+  
+  .tailToHead { animation: tailToHead 5s linear; transform: rotateX(40deg); }
+  @keyframes tailToHead {
+    0% { transform: translateY(0px) rotateX(220deg); }
+    33% { transform: translateY(-125px) rotateX(1820deg); }
+    66% { transform: translateY(-250px) rotateX(2730deg); }
+    100% { transform: translateY(0px) rotateX(3640deg); }
+  }
+  
+  .tailToTail { animation: tailToTail 5s linear; transform: rotateX(220deg); }
+  @keyframes tailToTail {
+    0% { transform: translateY(0px) rotateX(220deg); }
+    33% { transform: translateY(-125px) rotateX(1820deg); }
+    66% { transform: translateY(-250px) rotateX(2730deg); }
+    100% { transform: translateY(0px) rotateX(3820deg); }
+  }
+
 #row {
-    
+    display: flex;
     /* flex-wrap: wrap; */
     justify-content: center;
+    justify-content: space-around;
     align-content: center;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 900px) {
     .box {
-        display: inline-flex;
-        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         
-        /* ackground-color: white;b */
-        width: 38%;
-        /* height: 50%; */
-        /* border-radius: 10%;
-        border: solid 5px;
-        border-color: black;
-        margin: 10px;
-        text-decoration: none;
-        text-align: center; */
-    }}
+        
+        width: 40%;
+       
+    }
+}
