@@ -102,3 +102,4 @@ function flip() {
     document.getElementsByTagName("button")[0].disabled = false;
   }, 7000);
 }
+
