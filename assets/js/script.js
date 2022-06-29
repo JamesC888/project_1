@@ -1,17 +1,18 @@
-var coinFlip = document.getElementById('api');
+function coinCall() {
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'a6818c31a4msh45fd99238bffffap109889jsn1dbd8e8a35cb',
-		'X-RapidAPI-Host': 'coin-flip2.p.rapidapi.com'
-	}
-};
-
-fetch('https://coin-flip2.p.rapidapi.com/flip', options)
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'a6818c31a4msh45fd99238bffffap109889jsn1dbd8e8a35cb',
+            'X-RapidAPI-Host': 'coin-flip2.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://coin-flip2.p.rapidapi.com/flip', options)
 	.then(response => response.json())
-	.then(response => console.log(response))
+	.then(response => flip(response.side === 'heads'? 1: -1))
 	.catch(err => console.error(err));
+}
 
 
 //SportsAPI (Sports,Teams,Events,Data)
@@ -77,8 +78,8 @@ function temp() {
   document.getElementsByTagName("button")[0].disabled = true;
   document.getElementsByClassName("coin")[0].className += " headToTail";
 }
-function flip() {
-  var newState = Math.random() >= 0.5 ? 1 : -1;
+function flip(newState) {
+ 
   document.getElementsByTagName("button")[0].disabled = true;
   if (curState == 1) {
     if (newState == 1) {
