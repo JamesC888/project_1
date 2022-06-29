@@ -8,16 +8,21 @@ body{
     display: inline-flex;
     justify-content: space-around;
     justify-content: center;
-    
+    align-items: center;
     background-color: white;
-    width: 200px;
+    width: 300px;
     height: 200px;
     border-radius: 10%;
     border: solid 5px;
     border-color: black;
     margin: 10px;
     text-decoration: none;
-    text-align: center;
+    /* text-align: center; */
+}
+
+.box:hover {
+    opacity: 50%;
+
 }
 
 .header {
@@ -30,11 +35,17 @@ body{
     display: flex;
     justify-content: center;
     align-self: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .a-tag-headers {
 color: black;
+}
+
+img {
+    width: 210px;
+    height: 140px;
+
 }
 
 button {
@@ -116,7 +127,7 @@ button {
 
 #row {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     justify-content: space-around;
     align-content: center;
@@ -129,7 +140,8 @@ button {
         justify-content: space-around;
         
         
-        width: 40%;
+        
+        
        
     }
 }
