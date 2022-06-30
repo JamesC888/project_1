@@ -1,5 +1,9 @@
-body{
+body {
     margin: 0px;
+    /* background-color: #11bd64; */
+    /* background-image: url("../images/background.jpg"); */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,121,9,1) 35%, rgba(15,183,38,1) 65%, rgba(0,255,72,1) 100%);
     -webkit-transform: perspective(500px);
     -webkit-transform-style: preserve-3d;
 }
@@ -29,6 +33,8 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    /* background-color: darkgray; */
+    
 }
 
 .container {
@@ -52,8 +58,9 @@ button {
     width: 50%;
     display: block;
     margin: 10px auto;
-  }
-  .coin {
+}
+
+.coin {
       background-image: url("https://i.imgur.com/Iw5eEoh.png");
       background-size: 100% 100%;
       border-radius: 100%;
@@ -64,9 +71,11 @@ button {
       -webkit-transition: .5s linear;
       -webkit-transform-style: preserve-3d;
   }
-  .bwd {
+  
+.bwd {
     transform: rotateX(180deg);
   }
+
   .coin:after {
       background-image: url("https://i.imgur.com/loMp8t7.png?1");
       background-size: 100% 100%;
@@ -80,7 +89,8 @@ button {
       -webkit-transform: rotateY(-90deg);
       -webkit-transform-origin: 100% 50%;
   }
-  .coin:before {
+  
+.coin:before {
       background-image: url("https://i.imgur.com/loMp8t7.png?1");
       background-size: 100% 100%;
       border-radius: 100%;
@@ -91,34 +101,39 @@ button {
       top: 0;
       width: 100px;
       -webkit-transform: translateZ(-5px);
-  }
-  
-  .headToHead { animation: headToHead 5s linear; transform: rotateX(40deg); }
-  @keyframes headToHead {
+    }
+    
+.headToHead { animation: headToHead 5s linear; transform: rotateX(40deg);   
+    }
+
+@keyframes headToHead {
     0% { transform: translateY(0px) rotateX(40deg); }
     33% { transform: translateY(-125px) rotateX(1820deg); }
     66% { transform: translateY(-250px) rotateX(2730deg); }
     100% { transform: translateY(0px) rotateX(3640deg); }
   }
   
-  .headToTail { animation: headToTail 5s linear; transform: rotateX(220deg); }
-  @keyframes headToTail {
+.headToTail { animation: headToTail 5s linear; transform: rotateX(220deg); }
+ 
+@keyframes headToTail {
     0% { transform: translateY(0px) rotateX(40deg); }
     33% { transform: translateY(-125px) rotateX(1820deg); }
     66% { transform: translateY(-250px) rotateX(2730deg); }
     100% { transform: translateY(0px) rotateX(3820deg); }
   }
   
-  .tailToHead { animation: tailToHead 5s linear; transform: rotateX(40deg); }
-  @keyframes tailToHead {
+.tailToHead { animation: tailToHead 5s linear; transform: rotateX(40deg); }
+
+@keyframes tailToHead {
     0% { transform: translateY(0px) rotateX(220deg); }
     33% { transform: translateY(-125px) rotateX(1820deg); }
     66% { transform: translateY(-250px) rotateX(2730deg); }
     100% { transform: translateY(0px) rotateX(3640deg); }
   }
   
-  .tailToTail { animation: tailToTail 5s linear; transform: rotateX(220deg); }
-  @keyframes tailToTail {
+.tailToTail { animation: tailToTail 5s linear; transform: rotateX(220deg); }
+
+@keyframes tailToTail {
     0% { transform: translateY(0px) rotateX(220deg); }
     33% { transform: translateY(-125px) rotateX(1820deg); }
     66% { transform: translateY(-250px) rotateX(2730deg); }
@@ -139,9 +154,5 @@ button {
         flex-wrap: wrap;
         justify-content: space-around;
         
-        
-        
-        
-       
     }
 }
