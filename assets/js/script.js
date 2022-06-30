@@ -19,61 +19,61 @@ function coinCall() {
 //Sport List
 var sportlist = document.getElementsByClassName("box NFL");
 const list = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
-		'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
-	}
+method: 'GET',
+headers: {
+	'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
+	'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
+}
 };
 
 fetch('https://sportscore1.p.rapidapi.com/sports', list)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+.then(response => response.json())
+.then(response => console.log(response))
+.catch(err => console.error(err));
 
 //Teams by sport
 const teams = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
-		'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
-	}
+method: 'GET',
+headers: {
+	'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
+	'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
+}
 };
 
 fetch('https://sportscore1.p.rapidapi.com/sports/1/teams?page=1', teams)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+.then(response => response.json())
+.then(response => console.log(response))
+.catch(err => console.error(err));
 
 //Events live by sport ID
 const events = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
-		'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
-	}
+method: 'GET',
+headers: {
+	'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
+	'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
+}
 };
 
 fetch('https://sportscore1.p.rapidapi.com/sports/1/events/live?page=1', events)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+.then(response => response.json())
+.then(response => console.log(response))
+.catch(err => console.error(err));
 
 //Sports Data
 const data = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
-		'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
-	}
+method: 'GET',
+headers: {
+	'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
+	'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
+}
 };
 
 fetch('https://sportscore1.p.rapidapi.com/sports/1', data)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+.then(response => response.json())
+.then(response => console.log(response))
+.catch(err => console.error(err));
 
-    var curState = 1;
+	var curState = 1;
 function temp() {
 	document.getElementsByTagName("button")[0].disabled = true;
 	document.getElementsByClassName("coin")[0].className += " headToTail";
