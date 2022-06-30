@@ -75,32 +75,31 @@ fetch('https://sportscore1.p.rapidapi.com/sports/1', data)
 
     var curState = 1;
 function temp() {
-  document.getElementsByTagName("button")[0].disabled = true;
-  document.getElementsByClassName("coin")[0].className += " headToTail";
+	document.getElementsByTagName("button")[0].disabled = true;
+	document.getElementsByClassName("coin")[0].className += " headToTail";
 }
 function flip(newState) {
- 
-  document.getElementsByTagName("button")[0].disabled = true;
-  if (curState == 1) {
+
+	document.getElementsByTagName("button")[0].disabled = true;
+	if (curState == 1) {
     if (newState == 1) {
-      document.getElementsByClassName("coin")[0].className += " headToHead";
+    document.getElementsByClassName("coin")[0].className += " headToHead";
     }
     else {
-      document.getElementsByClassName("coin")[0].className += " headToTail";
+    document.getElementsByClassName("coin")[0].className += " headToTail";
     }
-  }
-  else {
+}
+else {
     if (newState == 1) {
-      document.getElementsByClassName("coin")[0].className += " tailToHead";
+    document.getElementsByClassName("coin")[0].className += " tailToHead";
     }
     else {
-      document.getElementsByClassName("coin")[0].className += " tailToTail";
+    document.getElementsByClassName("coin")[0].className += " tailToTail";
     }
-  }
-  curState = newState;
-  setTimeout(function () {
+}
+curState = newState;
+setTimeout(function () {
     document.getElementsByClassName("coin")[0].className = "coin" + (curState == -1 ? " bwd" : "");
     document.getElementsByTagName("button")[0].disabled = false;
-  }, 7000);
+}, 7000);
 }
-
