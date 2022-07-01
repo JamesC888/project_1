@@ -29,29 +29,25 @@ body {
 
 }
 
-.header {
+
+
+/* .header {
     display:flex;
     justify-content: center;
     align-items: center;
-    /* background-color: darkgray; */
+    background-color: darkgray; 
     
 }
+
+header {
+    background-color: darkgray;
+} */
 
 .container {
     display: flex;
     justify-content: center;
     align-self: center;
     /* align-items: center; */
-}
-
-.a-tag-headers {
-color: black;
-}
-
-img {
-    width: 210px;
-    height: 140px;
-
 }
 
 button {
@@ -316,4 +312,9 @@ body {
     .card:focus-within:before, .card:focus-within:after, .card:focus-within .content, .card:focus-within .content > *:not(.title) {
         transition-duration: 0s;
     }
+}
+
+nav {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(112,115,112,1) 35%, rgba(67,69,68,1) 65%, rgba(8,8,8,1) 100%);
 }
