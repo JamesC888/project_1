@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Put Your Money Where Your Mouth Is</title>
 </head>
-<body>
 
 
 <header>
@@ -20,45 +21,87 @@
 <body>
   <section class="container">
 
-<div class="api-container">
-  <div class="coin"></div>
-  <div class="coinBtn">
-    <button id="heads">Heads</button>
-    <button id="tails">Tails</button>
-  </div>
-  <main class="page-content">
+    <div class="api-container">
+      <div class="coin"></div>
+      <div class="coinBtn">
+        <button id="heads">Heads</button>
+        <button id="tails">Tails</button>
+      </div>
+      <main class="page-content">
+
     <div class="card">
         <div class="content">
             <h2 class="title">NFL</h2>
-            <p class="copy">National Football League</p><button class="btn">View Stats</button>
+            <p class="copy">National Football League</p><button data-target="modal1" class="btn modal-trigger">Stats</button>
         </div>
     </div>
     <div class="card">
         <div class="content">
             <h2 class="title">NBA</h2>
-            <p class="copy">National Basketball Association</p><button class="btn">View Stats</button>
+            <p class="copy">National Basketball Association</p><button data-target="modal2" class="btn modal-trigger">View Events</button>
         </div>
     </div>
     <div class="card">
         <div class="content">
             <h2 class="title">MLB</h2>
-            <p class="copy">Major League Baseball</p><button class="btn">View Stats</button>
+            <p class="copy">Major League Baseball</p><button data-target="modal3" class="btn modal-trigger">Stats</button>
         </div>
     </div>
     <div class="card">
         <div class="content">
             <h2 class="title">NHL</h2>
-            <p class="copy">National Hockey Team</p><button class="btn">View Stats</button>
+            <p class="copy">National Hockey Team</p><button data-target="modal4" class="btn modal-trigger">Stats</button>
         </div>
     </div>
   </main>
 </div>
-
-
-
-
   </section>
 
+    <!-- Modal Structure -->
+    <!-- NFL Modal -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>nfl inFO </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+<!-- NBA Modal -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>NBA </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+<!-- MLB Modal -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>MLB </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+<!-- NHL Modal -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>NHL</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script src="./assets/js/script.js"></script>
 </body>
