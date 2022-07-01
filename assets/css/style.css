@@ -1,11 +1,15 @@
 body {
     margin: 0px;
-    /* background-color: #11bd64; */
-    /* background-image: url("../images/background.jpg"); */
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,121,9,1) 35%, rgba(15,183,38,1) 65%, rgba(0,255,72,1) 100%);
     -webkit-transform: perspective(500px);
     -webkit-transform-style: preserve-3d;
+}
+
+nav {
+    background-color: black;
+    text-align: center;
+    
 }
 
 .box {
