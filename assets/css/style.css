@@ -29,20 +29,6 @@ body {
 
 }
 
-
-
-/* .header {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: darkgray; 
-    
-}
-
-header {
-    background-color: darkgray;
-} */
-
 .container {
     display: flex;
     justify-content: center;
@@ -56,72 +42,43 @@ button {
     margin: 10px auto;
 }
 .coin {
-  background-image: url("https://i.imgur.com/Iw5eEoh.png");
-  background-size: 100% 100%;
-  border-radius: 100%;
-  height: 100px;
-  margin: 300px auto 0;
-  position: relative;
-  width: 100px;
-  -webkit-transition: .5s linear;
-  -webkit-transform-style: preserve-3d;
+    background-image: url("https://i.imgur.com/Iw5eEoh.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+    height: 100px;
+    margin: 300px auto 0;
+    position: relative;
+    width: 100px;
+    -webkit-transition: .5s linear;
+    -webkit-transform-style: preserve-3d;
 }
-.bwd {
-  transform: rotateX(180deg);
-}
-.coin:after {
-  background-image: url("https://i.imgur.com/loMp8t7.png?1");
-  background-size: 100% 100%;
-  bottom: 0;
-  content: '';
-  left: 45px;
-  position: absolute;
-  top: 0;
-  width: 5px;
-  z-index: -10;
-  -webkit-transform: rotateY(-90deg);
-  -webkit-transform-origin: 100% 50%;
-}
-.coin:before {
-  background-image: url("https://i.imgur.com/loMp8t7.png?1");
-  background-size: 100% 100%;
-  border-radius: 100%;
-  content: '';
-  height: 100px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100px;
-  -webkit-transform: translateZ(-5px);
-}
-
 .bwd {
     transform: rotateX(180deg);
 }
-.card:before {
+.coin:after {
+    background-image: url("https://i.imgur.com/loMp8t7.png?1");
+    background-size: 100% 100%;
+    bottom: 0;
     content: '';
+    left: 45px;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 110%;
-    background-size: cover;
-    background-position: 55% 70%;
-    transition: transform calc(var(--d) * 1.5) var(--e);
-    pointer-events: none;
+    width: 5px;
+    z-index: -10;
+    -webkit-transform: rotateY(-90deg);
+    -webkit-transform-origin: 100% 50%;
 }
-.card:after {
+.coin:before {
+    background-image: url("https://i.imgur.com/loMp8t7.png?1");
+    background-size: 100% 100%;
+    border-radius: 100%;
     content: '';
-    display: block;
+    height: 100px;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    pointer-events: none;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
-    transform: translateY(-50%);
-    transition: transform calc(var(--d) * 2) var(--e);
+    width: 100px;
+    -webkit-transform: translateZ(-5px);
 }
 
 .headToHead { animation: headToHead 5s linear; transform: rotateX(40deg); }
@@ -343,26 +300,7 @@ body {
     }
 }
 
-<<<<<<< HEAD
 nav {
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(112,115,112,1) 35%, rgba(67,69,68,1) 65%, rgba(8,8,8,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(112,115,112,1) 35%, rgba(67,69,68,1) 65%, rgba(8,8,8,1) 100%);
 }
-=======
-.coinBtn {
-  display: flex;
-}
-
-.coinBtn button {
-  width: 80px;
-  height: 50px;
-}
-
-#heads {
-  margin-right: 70px;
-}
-
-
-
-
->>>>>>> 77f1cfc2d8ba4ffd52613c631344e62317f7b973
