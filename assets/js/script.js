@@ -74,13 +74,10 @@ fetch('https://sportscore1.p.rapidapi.com/sports/1', data)
 .catch(err => console.error(err));
 
 	var curState = 1;
-function temp() {
-	document.getElementsByTagName("button")[0].disabled = true;
-	document.getElementsByClassName("coin")[0].className += " headToTail";
-}
+
+
 function flip(newState) {
 
-	document.getElementsByTagName("button")[0].disabled = true;
 	if (curState == 1) {
     if (newState == 1) {
     document.getElementsByClassName("coin")[0].className += " headToHead";
@@ -118,3 +115,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // instance.open();
 
 // instance.close();
+var headsCall = document.querySelector('#heads');
+var tailsCall = document.querySelector('#tails');
+
+headsCall.addEventListener('click', function() {
+
+coinCall();
+
+});
+
+tailsCall.addEventListener('click', function() {
+
+coinCall();
+	
+	});
