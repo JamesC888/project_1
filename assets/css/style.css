@@ -300,7 +300,15 @@ body {
     }
 }
 
-nav {
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(112,115,112,1) 35%, rgba(67,69,68,1) 65%, rgba(8,8,8,1) 100%);
-}
+.coinBtn {
+    display: flex;
+  }
+  
+  .coinBtn button {
+    width: 80px;
+    height: 50px;
+  }
+  
+  #heads {
+    margin-right: 70px;
+  }
