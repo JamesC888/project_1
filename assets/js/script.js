@@ -103,3 +103,18 @@ setTimeout(function () {
     document.getElementsByTagName("button")[0].disabled = false;
 }, 7000);
 }
+
+//Javascript for modal
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems,);
+
+	// return instances;
+});
+
+// var instance = m.Modal.getInstance(elem);
+
+// instance.open();
+
+// instance.close();

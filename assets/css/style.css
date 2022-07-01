@@ -317,3 +317,52 @@ body {
         transition-duration: 0s;
     }
 }
+
+/* Modal */
+/* .modal {
+	position: fixed;
+	z-index: 10;
+	top: 2em;
+	bottom: 2em;
+	left: 2em;
+	right: 2em;
+	background: white;
+	box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.5);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: none;
+}
+.modal-header {
+	text-align: left;
+	padding: 5em 0;
+	margin-bottom: 2em;
+}
+.model-title-box {
+	padding: 3em 0 3em 3em;
+	color: white;
+	width: 70%;
+}
+.model-title-box .model-title {
+	font-size: 3.5rem;
+	display: inline-block;
+}
+.model-title-box .model-title::after {
+	content: "";
+	height: 1px;
+	margin: 1em 0;
+	background: white;
+	width: 100%;
+}
+.modal-subtitle {
+	font-size: 1rem;
+}
+.modal-content {
+	text-align: left;
+	width: 85%;
+	margin: 0 auto;
+	padding-bottom: 2em;
+} */
+
+.modal{
+	z-index: 20;
+}
