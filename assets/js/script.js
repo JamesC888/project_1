@@ -77,7 +77,7 @@ fetch('https://sportscore1.p.rapidapi.com/sports/1', data)
 .catch(err => console.error(err));
 
 	var curState = 1;
-
+    var feedbackEl = document.querySelector("#feedback");
 
 function flip(newState) {
 
@@ -101,7 +101,54 @@ curState = newState;
 setTimeout(function () {
     document.getElementsByClassName("coin")[0].className = "coin" + (curState == -1 ? " bwd" : "");
     document.getElementsByTagName("button")[0].disabled = false;
-}, 7000);
+}, 5000);
+
+// coin flip feedback
+// heads
+    if (curState !== -1) {
+   
+      feedbackEl.textContent = "😢😢Loser😢😢";
+      feedbackEl.style.color = "red";
+      feedbackEl.style.fontSize = "400%";
+    } else {
+      feedbackEl.textContent = "💰💰Winner💰💰!";
+      feedbackEl.style.color = "white";
+      feedbackEl.style.fontSize = "400%";
+    }
+  
+    // // flash winner/loser feedback
+    var delayInMilliseconds = 5000
+    // setTimeout(function(){
+    // feedbackEl.setAttribute("class", "feedback");
+    // }, delayInMilliseconds);
+    
+    // setTimeout(function() {
+    //     feedbackEl.setAttribute("class", "feedback hide");
+    //   }, 7500)
+    
+
+    //   tails
+    //   if () {
+   
+    //     feedbackEl.textContent = "😢😢Loser😢😢";
+    //     feedbackEl.style.color = "red";
+    //     feedbackEl.style.fontSize = "400%";
+    //   } else {
+    //     feedbackEl.textContent = "💰💰Winner💰💰!";
+    //     feedbackEl.style.color = "white";
+    //     feedbackEl.style.fontSize = "400%";
+    //   }
+    
+      
+      
+      setTimeout(function(){
+      feedbackEl.setAttribute("class", "feedback");
+      }, delayInMilliseconds);
+      
+      setTimeout(function() {
+          feedbackEl.setAttribute("class", "feedback hide");
+        }, 7500)
+
 }
 
 //Javascript for modal
