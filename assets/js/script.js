@@ -32,18 +32,21 @@ fetch('https://sportscore1.p.rapidapi.com/sports', list)
 .catch(err => console.error(err));
 
 //Teams by sport
-const teams = {
-method: 'GET',
-headers: {
-	'X-RapidAPI-Key': 'beeb917b33msh5fc7c425b542b12p1cd17ejsna253aba31551',
-	'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
-}
-};
+function sportCall() { 
+	const options = {
+		method: 'GET',
+		headers: {
+			'X-RapidAPI-Key': 'a6818c31a4msh45fd99238bffffap109889jsn1dbd8e8a35cb',
+			'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com'
+		}
+	};
+	
+	fetch('https://sportscore1.p.rapidapi.com/sports/1/teams?page=1', options)
+		.then(response => response.json())
+		.then(response => console.log(response))
+		.catch(err => console.error(err));
 
-fetch('https://sportscore1.p.rapidapi.com/sports/1/teams?page=1', teams)
-.then(response => response.json())
-.then(response => console.log(response))
-.catch(err => console.error(err));
+}
 
 //Events live by sport ID
 const events = {
@@ -176,4 +179,46 @@ tailsCall.addEventListener('click', function() {
 coinCall();
 	
 	});
+
+	
+	var mlbBtn = document.getElementById('mlbBtn');
+
+function mlbCall() {
+
+	const options = {
+		method: 'GET',
+		headers: {
+			'X-RapidAPI-Key': 'a6818c31a4msh45fd99238bffffap109889jsn1dbd8e8a35cb',
+			'X-RapidAPI-Host': 'baseball4.p.rapidapi.com'
+		}
+	};
+	
+	fetch('https://baseball4.p.rapidapi.com/leagues', options)
+	.then(response => {
+		return response.json()
+		
+	})
+	.then(response => {
+		console.log(response)
+		console.log(response.results)
+		const data = response.results.map(leagues => {
+			return `<p>Leagues: ${leagues.name}
+					   (Number of Games: ${leagues.numGames})
+					   (${leagues.seasonState})
+					   (Preseason Start Date: ${leagues.seasonDateInfo.preSeasonStartDate}, Preseason End Date: ${leagues.seasonDateInfo.preSeasonEndDate}, Season Start Date: ${leagues.seasonDateInfo.seasonStartDate})
+			</p>`;
+		}).join("");
+		document.querySelector("#modal3").insertAdjacentHTML("afterbegin", data);
+	})
+		.then(response => {
+		
+	})
+	.catch(err => console.error(err));
+	
+
+}
+
+mlbCall();
+
+
 
